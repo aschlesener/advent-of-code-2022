@@ -4,13 +4,16 @@
     {
         public static void Main(string[] args)
         {
+            int day = 1;
+
             if (args.Length == 0)
             {
                 Console.WriteLine("Specify a day to run by passing in an argument, e.g. '1'");
-                return;
+                day = Int32.Parse(Console.ReadLine());
+            } else {
+                day = int.Parse(args[0]);
             }
 
-            int day = int.Parse(args[0]);
             switch (day)
             {
                 case 1:
